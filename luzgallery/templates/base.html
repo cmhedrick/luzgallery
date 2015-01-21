@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block ex_css %}
+    {% endblock %}
+    <link rel="stylesheet" href="/static/global.css" />
+    <title>{% block title %}Luz Gallery{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/gallery/gallery/">Galleries</a></li>
+        </ul>
+    </nav>
+    <section>
+        {% block content %}{% endblock %}
+    </section>
+    {% block ex_js %}
+    {% endblock %}
+</body>
+</html>
