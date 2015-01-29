@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
     <h1>Galleries</h1>
-    <ul>
+    <ul id="gallery_list">
         {% for gallery in gallery_list %}
             <li>
                 <a href="{{ gallery.title }}/">
-                    <img src="{{ MEDIA_URL }}{{ gallery.image_set.first.picture }}"/>
+                    <img class="gallery_tile" src="{{ MEDIA_URL }}{{ gallery.image_set.first.picture }}"/>
                 </a>
             </li>
         {% empty %}

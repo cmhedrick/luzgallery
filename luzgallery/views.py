@@ -1,7 +1,17 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
+from django.views.generic import TemplateView
 
 import models
+
+
+class HomeView(TemplateView):
+    template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
+        return {
+            'request': self.request,
+        }
 
 
 class GalleryListView(ListView):

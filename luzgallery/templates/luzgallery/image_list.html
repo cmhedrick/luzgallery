@@ -13,6 +13,7 @@
         <div class="slides"></div>
         <!-- Controls for the borderless lightbox -->
         <h3 class="title"></h3>
+        <p class="dis"></p>
         <a class="prev">‹</a>
         <a class="next">›</a>
         <a class="close">×</a>
@@ -43,11 +44,11 @@
     </div>
     <div id="links">
         {% for image in images %}
-            <a href="{{ MEDIA_URL }}{{ image.picture }}" title="{{ image.title }}" data-gallery>
+            <a href="{{ MEDIA_URL }}{{ image.picture }}" title="{{ image.title }}" dis="OMODJAJKDLSJLJDJSKDJSLJDL"  data-gallery>
                 <img src="{{ MEDIA_URL }}{{ image.picture }}" alt="{{ image.title }}" class="image_tile"/>
             </a>
         {% empty %}
-            <h1>No Images
+            <h1>No Images</h1>
         {% endfor %}
     </div>
 {% endblock %}
@@ -56,7 +57,7 @@
     <script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
     <script src="/static/util/Bootstrap-Image-Gallery-3.1.1/js/bootstrap-image-gallery.min.js"></script>-->
     <script src="/static/util/jquery.min.js"></script>
-    <script src="/static/util/jquery.blueimp-gallery.min.js"></script>
+    <script src="/static/util/jquery.blueimp-gallery.js"></script>
     <script src="/static/util/Bootstrap-Image-Gallery-3.1.1/js/bootstrap-image-gallery.min.js"></script>
 {% endblock %}
 
